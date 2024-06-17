@@ -14,7 +14,7 @@ jobs:
     name: Binadox Structure-As-Code Analyzer
     steps:
       - name: binadox
-        uses: binadox-public/binadox-infrastructure-as-code-analyzer@v1.6
+        uses: binadox-public/binadox-infrastructure-as-code-analyzer@v1.1
         with:
           binadox-secret-token: '${{ secrets.BINADOX_TOKEN }}'
           binadox-server-url: 'https://app.binadox.com/iaas-analyze'
