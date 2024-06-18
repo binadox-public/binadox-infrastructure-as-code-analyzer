@@ -8,8 +8,8 @@ async function sendToBinadox(url, token, data) {
     const res = await fetch(url ,{
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization' : 'Bearer ' + token,
+            'Content-Type': 'application/json',
+            'Authorization' : 'ApiToken ' + token,
         },
         body: querystring.stringify(data)
     })
@@ -27,6 +27,9 @@ try {
   const binadoxServerUrl = core.getInput('binadox-server-url');
   const binadoxToken = core.getInput('binadox-secret-token');
   const binadoxProject = core.getInput('binadox-project-name');
+
+  console.log('TOKEN:', binadoxToken)
+  console.log('PROJECT:', binadoxProject)	
 
   const data = {
     'project': binadoxProject,

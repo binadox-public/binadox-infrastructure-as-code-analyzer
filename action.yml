@@ -4,7 +4,7 @@ inputs:
   binadox-server-url:
     description: 'Binadox server url'
     required: true
-    default: 'https://httpbin.org/post'
+    default: 'https://app.binadox.com/api/1/organizations/pricing/callback/analyze_iaac'
   binadox-project-name:
     description: 'project name as defined at Binadox'
     required: true
