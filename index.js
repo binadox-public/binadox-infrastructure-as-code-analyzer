@@ -27,8 +27,6 @@ try {
   const binadoxToken = core.getInput('binadox-secret-token');
   const binadoxProject = core.getInput('binadox-project-name');
 
-  console.log('TOKEN:', binadoxToken)
-  console.log('PROJECT:', binadoxProject)	
 
   const data = {
     'project': binadoxProject,
@@ -36,7 +34,8 @@ try {
   }
 
   sendToBinadox(binadoxServerUrl, binadoxToken, data)  
-  
+  const payload = JSON.stringify(github.context, undefined, 2)
+  console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
