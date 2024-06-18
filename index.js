@@ -1,6 +1,5 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const querystring = require('querystring');
 
 
 async function sendToBinadox(url, token, data) {
@@ -11,8 +10,7 @@ async function sendToBinadox(url, token, data) {
             'Content-Type': 'application/json',
             'Authorization' : 'ApiToken ' + token,
         },
-        // body: querystring.stringify(data)
-        body: data
+        body: JSON.stringify(data)
     })
     
     if (res.ok) {
