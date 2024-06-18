@@ -11,7 +11,8 @@ async function sendToBinadox(url, token, data) {
             'Content-Type': 'application/json',
             'Authorization' : 'ApiToken ' + token,
         },
-        body: querystring.stringify(data)
+        // body: querystring.stringify(data)
+        body: data
     })
     
     if (res.ok) {
