@@ -4,7 +4,7 @@
 
 This GitHub Action intiates Binadox analysis process for your preconfigured code
 
-Create a new file in `.github/workflows/biandox.yml` in your repo with the following content.
+Create a new file in `.github/workflows/binadox.yml` in your repo with the following content.
 ```yaml
 on: [push]
 
