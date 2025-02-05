@@ -27,8 +27,6 @@ try {
   const binadoxToken = core.getInput('binadox-secret-token');
   const binadoxProject = core.getInput('binadox-project-name');
 
-  core.setOutput("binadoxToken " + binadoxToken)
-
   const data = {
     'project': binadoxProject,
     'github_data': github.context
