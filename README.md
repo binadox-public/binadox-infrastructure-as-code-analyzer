@@ -14,10 +14,10 @@ jobs:
     name: Binadox Structure-As-Code Analyzer
     steps:
       - name: binadox
-        uses: binadox-public/binadox-infrastructure-as-code-analyzer@v1.2
+        uses: binadox-public/binadox-infrastructure-as-code-analyzer@v1.6
         with:
           binadox-secret-token: '${{ secrets.BINADOX_TOKEN }}'
-          binadox-server-url: 'https://app.binadox.com/api/1/organizations/pricing/callback/analyze_iaac'
+          binadox-server-url: 'https://prod.binadox.com/api/1/organizations/pricing/callback/analyze_iaac'
           binadox-project-name: 'my project'
       - name: Get the status
         run: echo "Status ${{ steps.binadox.outputs.status }}"
